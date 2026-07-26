@@ -1,65 +1,71 @@
-import { assets, workData } from "@/assets/assets";
-import Image from "next/image";
 import React from "react";
+import { workData } from "@/assets/assets";
+
+const GithubIcon = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+    <path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.46-1.19-1.11-1.51-1.11-1.51-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.27 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z" />
+  </svg>
+);
+
+const LinkIcon = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3ZM5 5h6v2H5v12h12v-6h2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" />
+  </svg>
+);
 
 const Work = () => {
   return (
-    <div id="work" className="w-full px-[12%] py-10 scroll-mt-15">
-      <h4 className="text-center mb-2 text-lg font-Ovo">My portolio</h4>
-      <h2 className="text-center text-5xl font-Ovo">My latest work</h2>
-      <p className="text-center max-w-xl  mx-auto mt-5 mb-6 font-Ovo">
-        Welcome to my web development portfolio! Explore a collection of
-        projects showcasing my expertise in full-stack development.
+    <div id="works" className="w-11/12 max-w-3xl mx-auto py-8 scroll-mt-32">
+      <h2 className="text-2xl font-bold mb-2">Works 🧩</h2>
+      <p className="text-muted mb-8">
+        A few things I&apos;ve built — full-stack apps and GenAI agents.
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 my-10 gap-5">
-        {workData.map((project, index) => (
+
+      <div className="flex flex-col gap-6">
+        {workData.map((project) => (
           <div
-            // className="aspect-square border border-gray-400 shadow-sm bg-no-repeat  bg-contain bg-center rounded-lg relative cursor-pointer"
-  className="
-    border border-gray-300 shadow-sm rounded-xl relative cursor-pointer
-    w-full
-    h-[220px] sm:h-[240px] md:h-[260px] lg:h-[280px]
-    bg-no-repeat bg-cover bg-center
-    transition hover:scale-[1.01] 
-  "
-            key={index}
-            style={{ backgroundImage: `url(${project.bgImage})` }}
+            key={project.title}
+            className="border border-border rounded-lg p-5 bg-card hover:border-fg transition"
           >
-            <div className="bg-teal-500 w-10/12 rounded-md absolute gap-2 bottom-5 left-1/2 -translate-x-1/2 py-3 px-3 flex flex-col items-center justify-center">
-              <div className="">
-                <h2 className="font-semibold text-sm w-full">
-                  {project.title}
-                </h2>
-                {/* <p className="text-sm text-gray-700">{project.description}</p> */}
-              </div>
-              <div className=" flex items-center gap-4 justify-center">
-                <a href={project.live} target="blank">
-          
-                  <Image
-                    src={assets.link}
-                    alt=""
-                    className=" border rounded-full p-2 bg-black border-black w-14 h-8 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] duration-500 hover:bg-lime-300 transition"
-                  />
+            <div className="flex items-start justify-between gap-4 mb-2">
+              <h3 className="font-bold">{project.title}</h3>
+              <div className="flex items-center gap-3 shrink-0">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub repo"
+                  className="hover:text-accent-blue transition"
+                >
+                  <GithubIcon />
                 </a>
-                <a href={project.github} target="blank">
-                  <Image
-                    src={assets.github}
-                    alt=""
-                    className=" border rounded-full p-2 border-black w-14 h-8 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] duration-500 hover:bg-lime-300 transition"
-                  />
-                </a>
+                {project.live && (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Live demo"
+                    className="hover:text-accent-blue transition"
+                  >
+                    <LinkIcon />
+                  </a>
+                )}
               </div>
+            </div>
+            <p className="text-muted text-sm mb-3">{project.description}</p>
+            <div className="flex flex-wrap gap-2">
+              {project.tech.map((t) => (
+                <span
+                  key={t}
+                  className="text-xs border border-border rounded px-2 py-1 text-muted"
+                >
+                  {t}
+                </span>
+              ))}
             </div>
           </div>
         ))}
       </div>
-      {/* <a
-        href=""
-        className="w-max flex items-center justify-center gap-2 mx-auto my-15 py-3 px-10 hover:bg-lightHover duration-500 text-gray-700 border-[0.5px] border-gray-700 rounded-full"
-      >
-        Show more
-        <Image alt="" src={assets.right_arrow_bold} className="w-4" />
-      </a> */}
     </div>
   );
 };

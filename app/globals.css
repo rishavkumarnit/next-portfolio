@@ -1,16 +1,34 @@
 @import "tailwindcss";
 
-
 @theme {
-  --font-Outfit: "Outfit", sans-serif;
-  --font-Ovo: "Ovo", serif;
-  --color-lightHover: #fcf4ff;
-  --color-darkHover: #2a004a;
-  --color-darkTheme: #11001F;
-  --shadow-black:4px 4px 0 #000;
-  --shadow-white:4px 4px 0 #fff;
+  --color-bg: #0a0a0a;
+  --color-fg: #ededed;
+  --color-muted: #9ca3af;
+  --color-border: #2e2e2e;
+  --color-card: #111111;
+  --color-accent-blue: #6ea8fe;
+  --color-accent-pink: #f472b6;
 }
 
-/* html {
-  font-family: var(--font-Outfit);
-} */
+html {
+  background-color: var(--color-bg);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}
+
+::selection {
+  background-color: var(--color-accent-blue);
+  color: #000;
+}
+
+.squiggle {
+  width: 100%;
+  height: 14px;
+  background-repeat: repeat-x;
+  background-size: 24px 14px;
+  opacity: 0.55;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='14' viewBox='0 0 24 14'%3E%3Cpath d='M0 7 Q6 0 12 7 T24 7' fill='none' stroke='%23888888' stroke-width='1.6'/%3E%3C/svg%3E");
+}

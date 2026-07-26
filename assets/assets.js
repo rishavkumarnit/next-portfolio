@@ -1,211 +1,142 @@
-import user_image from "./user-image.png";
-import code_icon from "./code-icon.png";
-import code_icon_dark from "./code-icon-dark.png";
-import edu_icon from "./edu-icon.png";
-import edu_icon_dark from "./edu-icon-dark.png";
-import project_icon from "./project-icon.png";
-import project_icon_dark from "./project-icon-dark.png";
-import vscode from "./vscode.png";
-import firebase from "./firebase.png";
-import figma from "./figma.png";
-import git from "./git.png";
-import mongodb from "./mongodb.png";
-import right_arrow_white from "./right-arrow-white.png";
-import logo from "./logo.png";
-import logo_dark from "./logo_dark.png";
-import mail_icon from "./mail_icon.png";
-import mail_icon_dark from "./mail_icon_dark.png";
-import profile_img from "./profile-img.png";
-import download_icon from "./download-icon.png";
-import hand_icon from "./hand-icon.png";
-import header_bg_color from "./header-bg-color.png";
-import moon_icon from "./moon_icon.png";
-import sun_icon from "./sun_icon.png";
-import arrow_icon from "./arrow-icon.png";
-import arrow_icon_dark from "./arrow-icon-dark.png";
-import menu_black from "./menu-black.png";
-import menu_white from "./menu-white.png";
-import close_black from "./close-black.png";
-import close_white from "./close-white.png";
-import web_icon from "./web-icon.png";
-import mobile_icon from "./mobile-icon.png";
-import ui_icon from "./ui-icon.png";
-import graphics_icon from "./graphics-icon.png";
-import right_arrow from "./right-arrow.png";
-import send_icon from "./send-icon.png";
-import right_arrow_bold from "./right-arrow-bold.png";
-import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
-import framework_white from "./framework-white.png";
-import framework_black from "./framework-black.png";
-import postgres from "./postgres.png";
- import link from "./link.svg";
- import github from "./github.svg";
-
-export const assets = {
-  user_image,
-  code_icon,
-  code_icon_dark,
-  edu_icon,
-  edu_icon_dark,
-  project_icon,
-  project_icon_dark,
-  vscode,
-  firebase,
-  figma,
-  git,
-  mongodb,
-  right_arrow_white,
-  logo,
-  logo_dark,
-  mail_icon,
-  mail_icon_dark,
-  profile_img,
-  download_icon,
-  hand_icon,
-  header_bg_color,
-  moon_icon,
-  sun_icon,
-  arrow_icon,
-  arrow_icon_dark,
-  menu_black,
-  menu_white,
-  close_black,
-  close_white,
-  web_icon,
-  mobile_icon,
-  ui_icon,
-  graphics_icon,
-  right_arrow,
-  send_icon,
-  right_arrow_bold,
-  right_arrow_bold_dark,
-  framework_white,
-  framework_black,
-  postgres,
-  link,
-  github
-};
-
 export const workData = [
   {
-    title: "sales-crm-management",
+    title: "Sales CRM — Admin Portal",
+    description:
+      "Full-stack Sales CRM with automated language-based lead assignment, CSV bulk uploads, performance dashboards and role-based workflows.",
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Chart.js"],
     bgImage: "/sales-crm-management-frontend.png",
     github: "https://github.com/rishavkumarnit/sales-crm-management-frontend",
     live: "https://management-frontend-nine.vercel.app/dashboard",
   },
-    {
-    title: "sales-crm-user",
+  {
+    title: "Sales CRM — Sales Portal",
+    description:
+      "Companion sales-rep portal for the CRM system with real-time data persistence and performance tracking.",
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB"],
     bgImage: "/sales-crm-user-frontend.png",
     github: "https://github.com/rishavkumarnit/sales-crm-user-frontend",
     live: "https://user-frontend-eta.vercel.app/dashboard",
   },
   {
-    title: "Pocket notes",
+    title: "Multilingual Agri Q&A System",
+    description:
+      "Multilingual (Hindi/English) LLM agent built with LangGraph using RAG, vector-search semantic caching, and agentic tool-calling for weather and price lookups.",
+    tech: [
+      "Python",
+      "FastAPI",
+      "LangGraph",
+      "OpenAI API",
+      "MongoDB Atlas Vector Search",
+      "React",
+      "TypeScript",
+    ],
     bgImage: "/work-2.jpeg",
-    github: "https://github.com/rishavkumarnit/pocket-notes",
-    live: "https://pocket-notes-topaz-three.vercel.app/",
+    github: "https://github.com/rishavkumarnit/MULTILINGUAL-AGRI-Q-A-SYSTEM",
+    live: "https://multilingual-agri-q-a-system.vercel.app/",
   },
   {
-    title: "Rock paper scissor",
-    bgImage: "/work-3.jpeg",
-    github: "https://github.com/rishavkumarnit/Rock-paper-scissor",
-    live: "https://rock-paper-scissor-puce-omega.vercel.app/",
-  },
-  {
-    title: "Job application portal",
+    title: "Job Application Portal",
+    description:
+      "A portal for posting and tracking job applications with role-based access.",
+    tech: ["React", "Node.js"],
     bgImage: "/work-4.jpeg",
     github: "https://github.com/rishavkumarnit/job-application-portal",
     live: "https://job-application-portal-eight.vercel.app/",
   },
   {
-    title: "Smart cart",
-    bgImage: "/work-5.jpeg",
-    github: "https://github.com/rishavkumarnit/shopping-cart",
-    live: "https://shopping-cart-blond-theta.vercel.app/",
-  },
-  {
-    title: "Weather app",
+    title: "Weather App",
+    description: "A weather lookup app powered by a public weather API.",
+    tech: ["React"],
     bgImage: "/work-6.jpeg",
     github: "https://github.com/rishavkumarnit/weather-app-REACT.js-",
     live: "https://weather-app-react-js-kappa.vercel.app/",
   },
   {
-    title: "To do app",
-    bgImage: "/work-7.jpeg",
-    github: "https://github.com/rishavkumarnit/To-do-app-REACT-",
-    live: "https://to-do-app-react-ruby.vercel.app/",
-  },
-  {
-    title: "Notepad",
-    bgImage: "/work-8.jpeg",
-    github: "https://github.com/rishavkumarnit/Notepad",
-    live: "https://notepad-inky-three.vercel.app/",
+    title: "Pocket Notes",
+    description: "A minimal notes app for quickly jotting things down.",
+    tech: ["React"],
+    bgImage: "/work-1.jpeg",
+    github: "https://github.com/rishavkumarnit/pocket-notes",
+    live: "https://pocket-notes-topaz-three.vercel.app/",
   },
 ];
 
-export const serviceData = [
+export const techStack = [
+  { emoji: "☕", label: "Java" },
+  { emoji: "🟨", label: "JavaScript" },
+  { emoji: "🔷", label: "TypeScript" },
+  { emoji: "🐍", label: "Python" },
+  { emoji: "⚛️", label: "React" },
+  { emoji: "▲", label: "Next.js" },
+  { emoji: "🟢", label: "Node.js" },
+  { emoji: "🚂", label: "Express.js" },
+  { emoji: "🍃", label: "Spring Boot" },
+  { emoji: "🔺", label: "GraphQL" },
+  { emoji: "🎨", label: "Tailwind CSS" },
+  { emoji: "🔑", label: "JWT" },
+  { emoji: "🍃", label: "MongoDB" },
+  { emoji: "🐘", label: "PostgreSQL" },
+  { emoji: "🔴", label: "Redis" },
+  { emoji: "☁️", label: "GCP" },
+  { emoji: "🐳", label: "Docker" },
+  { emoji: "▲", label: "Vercel" },
+  { emoji: "🤖", label: "OpenAI API" },
+  { emoji: "🕸️", label: "LangGraph" },
+  { emoji: "📚", label: "RAG" },
+  { emoji: "⚡", label: "FastAPI" },
+  { emoji: "🔌", label: "MCP" },
+];
+
+export const experienceData = [
   {
-    icon: assets.web_icon,
-    title: "Web design",
-    description: "Web development is the process of building, programming...",
-    link: "",
+    role: "Full Stack Engineer",
+    company: "ANNAM.AI",
+    location: "Remote",
+    period: "Dec 2025 - Present",
+    bullets: [
+      "Built an automated disaster recovery pipeline, scheduling daily database backups to Google Cloud Storage with cron jobs and restoration workflows for rapid recovery.",
+      "Engineered full-stack audit logging infrastructure to capture and persist moderator actions, cutting operational audit time by 90%.",
+      "Optimized backend performance by eliminating redundant API calls and duplicate record creation, reducing API requests by 50% and duplicate document generation by 20%.",
+    ],
   },
   {
-    icon: assets.mobile_icon,
-    title: "Mobile app",
-    description:
-      "Mobile app development involves creating software for mobile devices...",
-    link: "",
+    role: "Software Engineer",
+    company: "Digistrique Solutions Private Limited",
+    location: "Mumbai",
+    period: "Jan 2025 - Nov 2025",
+    bullets: [
+      "Led end-to-end development of an automated data archival system using Spring Batch, REST APIs and Google Cloud Storage.",
+      "Owned the strategic migration from RESTful APIs to GraphQL, improving data retrieval efficiency and future-proofing the platform.",
+      "Integrated Customer.io SDK and webhooks to automate behavioral/transactional messaging, and built event-driven pipelines with Google Pub/Sub.",
+    ],
   },
   {
-    icon: assets.ui_icon,
-    title: "UI/UX design",
-    description:
-      "UI/UX design focuses on creating a seamless user experience...",
-    link: "",
-  },
-  {
-    icon: assets.graphics_icon,
-    title: "Graphics design",
-    description: "Creative design solutions to enhance visual communication...",
-    link: "",
+    role: "Assistant Manager",
+    company: "Bank of Baroda",
+    location: "India",
+    period: "July 2015 - August 2023",
+    bullets: [
+      "Led operations across 100 branches, improving efficiency by 20% and driving 20+ crore in deposit growth.",
+      "Transitioned into software engineering via the Crio.Do fellowship in late 2023.",
+    ],
   },
 ];
 
-export const infoList = [
+export const educationData = [
   {
-    icon: assets.code_icon,
-    iconDark: assets.code_icon_dark,
-    title: "Languages",
-    description: "Java, HTML, CSS, JavaScript",
+    school: "Crio.Do",
+    degree: "Fellowship in Backend Development",
+    location: "",
+    period: "Nov 2023 - March 2025",
+    bullets: [
+      "Relevant coursework: Java, Spring Boot, Object-Oriented Design, Data Structures and Algorithms.",
+    ],
   },
   {
-    icon: assets.framework_black,
-    iconDark: assets.framework_white,
-    title: "Tools",
-    description:
-      "VS Code, Mongo DB, Postrgre SQL, Figma, Git, Grafana, React Js",
+    school: "National Institute of Technology, Allahabad",
+    degree: "B.Tech, Chemical Engineering",
+    location: "Allahabad",
+    period: "2009 - 2013",
+    bullets: [],
   },
-  {
-    icon: assets.framework_black,
-    iconDark: assets.framework_white,
-    title: "Frameworks",
-    description: "Spring Boot, Node Js, Express Js, Next Js",
-  },
-
-  {
-    icon: assets.project_icon,
-    iconDark: assets.project_icon_dark,
-    title: "Projects",
-    description:
-      "Pocket Notes, Workout Buddy, Rock Paper Scissor, Job Application Portal",
-  },
-];
-
-export const toolsData = [
-  assets.vscode,
-  assets.firebase,
-  assets.mongodb,
-  assets.figma,
-  assets.git,
 ];
