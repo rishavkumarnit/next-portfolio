@@ -44,7 +44,7 @@ const Navbar = () => {
         </a>
         <div className="flex items-center gap-5">
           <a
-            href="https://drive.google.com/uc?export=download&id=1qqtacDDxgyrTci2iM1wof4r4dQqL6vvQ"
+            href="https://drive.google.com/uc?export=download&id=1YAoO9UXa96O3FkoflSom-LLfrUaN35vi"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm underline decoration-fg underline-offset-4 hover:text-accent-blue hover:decoration-accent-blue transition"
